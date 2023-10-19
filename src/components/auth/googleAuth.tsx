@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { getAuth, signInWithPopup, GoogleAuthProvider} from 'firebase/auth';
+import loginIcon from '../../images/google-icon.png';
 
 export const GoogleAuth: FC = () => {
     const auth = getAuth();
@@ -9,5 +10,7 @@ export const GoogleAuth: FC = () => {
         signInWithPopup(auth, provider);
     }
 
-    return <button className="button" onClick={onLoginClick}>Google Login</button>
+    return <button className="button" onClick={onLoginClick}>
+        <img src={loginIcon} alt="logo" className="button-icon"/>
+        Google Login</button>
 }

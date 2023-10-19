@@ -7,5 +7,5 @@ export const Logout: FC = () => {
         signOut(auth);
     }
 
-    return <button className='button' onClick={onLogoutClick}>Logout</button>;
+    return <button className='button logoout text' onClick={onLogoutClick}>Logout</button>;
 };
