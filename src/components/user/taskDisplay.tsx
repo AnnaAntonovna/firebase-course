@@ -15,7 +15,7 @@ export const TaskDisplay: FC<{ task: TaskEntity }> = ({ task }) => {
   useEffect(() => {
     const retrieveUrl = async () => {
       if (!fileName) {return}
-
+      
       const fileUrl = await getDownloadURL(fileRef);
       setFileUrl(fileUrl);
     };
@@ -23,7 +23,7 @@ export const TaskDisplay: FC<{ task: TaskEntity }> = ({ task }) => {
   }, []);
 
   const onDeleteTask = async (taskId: string) => {
-    await deleteDoc(doc(dbInstance, "Tasks", taskId));
+    await deleteDoc(doc(dbInstance, "tasks", taskId));
   };
 
   return (
