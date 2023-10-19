@@ -23,7 +23,7 @@ export const TaskDisplay: FC<{ task: TaskEntity }> = ({ task }) => {
   }, []);
 
   const onDeleteTask = async (taskId: string) => {
-    await deleteDoc(doc(dbInstance, "tasks", taskId));
+    await deleteDoc(doc(dbInstance, "Tasks", taskId));
   };
 
   return (
